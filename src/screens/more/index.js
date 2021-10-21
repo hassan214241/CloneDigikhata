@@ -10,7 +10,7 @@ flex: 1;
 const ContentList = styled.View`
  flex: 1;
  /* justify-content: center; */
- background-color: brown;
+
  margin: 30px;
 
  `
@@ -27,9 +27,9 @@ export const More = () => {
                         <List.Item title="Item 2" />
                     </List.Accordion>
                     <View>
-                        <Text>
+                        {/* <Text>
                             List.Accordion can be wrapped because implementation uses React.Context.
-                        </Text>
+                        </Text> */}
                         <List.Accordion title="Accordion 3" id="3">
                             <List.Item title="Item 3" />
                         </List.Accordion>

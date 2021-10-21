@@ -1,10 +1,6 @@
-import React from 'react';
-import { HomeTab } from "./src/navigation/HomeTab";
-
+import React from "react";
+import { HomeStack } from "./src/navigation/HomeStack";
+import "react-native-gesture-handler";
 export default function App() {
-  return (
-    <HomeTab />
-  );
+  return <HomeStack />;
 }
-
-
