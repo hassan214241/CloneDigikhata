@@ -10,6 +10,8 @@ import { CreateSupplier } from "../screens/supplier/create supplier";
 import { CashRegister } from "../screens/cash/cash register";
 import { CashIn } from "../screens/cash/cash in";
 import { CashOut } from "../screens/cash/cash out";
+import { NewBusiness } from "../screens/new business";
+import { Collection } from "../screens/collection";
 
 const Stack = createStackNavigator();
 export const HomeStack = () => {
@@ -152,6 +154,44 @@ export const HomeStack = () => {
                 >
                   Cash Out
                 </Text>
+              </View>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="NewBusiness"
+          component={NewBusiness}
+          options={{
+            headerTitleStyle: {
+              color: "#fff",
+            },
+            headerStyle: {
+              backgroundColor: "tomato",
+            },
+            // headerTitleAlign: "left",
+            headerTitle: () => (
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Text style={{ color: "white", fontSize: 20 }}>
+                  New Business
+                </Text>
+              </View>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="Collection"
+          component={Collection}
+          options={{
+            headerTitleStyle: {
+              color: "#fff",
+            },
+            headerStyle: {
+              backgroundColor: "tomato",
+            },
+            // headerTitleAlign: "left",
+            headerTitle: () => (
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Text style={{ color: "white", fontSize: 20 }}>Collection</Text>
               </View>
             ),
           }}

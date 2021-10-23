@@ -9,4 +9,6 @@ export * from "./supplier/create supplier";
 export * from "./cash/cash in";
 export * from "./cash/cash out";
 export * from "./cash/cash register";
-export * from "./demo";
+export * from "./bottom sheet";
+export * from "./new business";
+export * from "./collection";

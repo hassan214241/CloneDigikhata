@@ -8,10 +8,16 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import RBSheet from "react-native-raw-bottom-sheet";
-import { Demo } from "../screens/demo";
+import { BottomSheet } from "../screens/bottom sheet";
+import { useNavigation } from "@react-navigation/native";
+import styled from "styled-components";
+const Collection = styled.View`
+  margin-left: 140px;
+`;
 const Tab = createBottomTabNavigator();
 export const HomeTab = () => {
   const refRBSheet = useRef();
+  const { navigate } = useNavigation();
   return (
     <Tab.Navigator
       screenOptions={{
@@ -44,7 +50,12 @@ export const HomeTab = () => {
               >
                 {children}
               </Text>
-              <View style={{ padding: 13, fontWeight: "bold" }}>
+              <View
+                style={{
+                  padding: 13,
+                  fontWeight: "bold",
+                }}
+              >
                 <AntDesign
                   name="down"
                   size={20}
@@ -55,18 +66,28 @@ export const HomeTab = () => {
                   ref={refRBSheet}
                   closeOnDragDown={true}
                   closeOnPressMask={false}
+                  animationType="fade"
+                  // height="360"
                   customStyles={{
                     wrapper: {
                       backgroundColor: "transparent",
                     },
                     draggableIcon: {
-                      backgroundColor: "black",
+                      backgroundColor: "#000",
                     },
                   }}
                 >
-                  <Demo />
+                  <BottomSheet />
                 </RBSheet>
               </View>
+              <Collection>
+                <AntDesign
+                  name="calendar"
+                  size={24}
+                  color="#fff"
+                  onPress={() => navigate("Collection")}
+                />
+              </Collection>
             </View>
           ),
           tabBarIcon: ({ color, focused, size }) => (
@@ -82,7 +103,56 @@ export const HomeTab = () => {
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="menu" size={size} color={color} />
           ),
-          headerShown: false,
+          headerTitleAlign: "left",
+
+          headerStyle: {
+            backgroundColor: "tomato",
+          },
+          headerTitle: () => (
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <FontAwesome
+                name="book"
+                size={26}
+                color="white"
+                style={{ paddingRight: 10 }}
+              />
+              <Text style={{ color: "#fff", fontSize: 20, fontWeight: "bold" }}>
+                Software
+              </Text>
+              <View
+                style={{
+                  padding: 13,
+                  fontWeight: "bold",
+                }}
+              >
+                <AntDesign
+                  name="down"
+                  size={20}
+                  color="#fff"
+                  onPress={() => refRBSheet.current.open()}
+                />
+                <RBSheet
+                  ref={refRBSheet}
+                  closeOnDragDown={true}
+                  closeOnPressMask={false}
+                  animationType="fade"
+                  // height="360"
+                  customStyles={{
+                    wrapper: {
+                      backgroundColor: "transparent",
+                    },
+                    draggableIcon: {
+                      backgroundColor: "#000",
+                    },
+                  }}
+                >
+                  <BottomSheet />
+                </RBSheet>
+              </View>
+            </View>
+          ),
+
+          // headerShown: false,
         }}
       />
     </Tab.Navigator>
