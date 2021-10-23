@@ -9,3 +9,4 @@ export * from "./supplier/create supplier";
 export * from "./cash/cash in";
 export * from "./cash/cash out";
 export * from "./cash/cash register";
+export * from "./demo";

@@ -51,6 +51,13 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
+            headerTitle: () => (
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Text style={{ color: "white", fontSize: 20 }}>
+                  Naya Customer Bnayen
+                </Text>
+              </View>
+            ),
           }}
         />
         <Stack.Screen
@@ -63,6 +70,13 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
+            headerTitle: () => (
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Text style={{ color: "white", fontSize: 20 }}>
+                  ADD SUPPLIER
+                </Text>
+              </View>
+            ),
           }}
         />
         <Stack.Screen
@@ -75,11 +89,73 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
+            headerTitle: () => (
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Text style={{ color: "white", fontSize: 20 }}>
+                  Naya Supplier Bnayen
+                </Text>
+              </View>
+            ),
           }}
         />
-        <Stack.Screen name="CashRegister" component={CashRegister} />
-        <Stack.Screen name="CashIn" component={CashIn} />
-        <Stack.Screen name="CashOut" component={CashOut} />
+        <Stack.Screen
+          name="CashRegister"
+          component={CashRegister}
+          options={{
+            headerTitleStyle: {
+              color: "#fff",
+            },
+            headerStyle: {
+              backgroundColor: "tomato",
+            },
+            // headerTitleAlign: "left",
+            headerTitle: () => (
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Text
+                  style={{ color: "white", fontSize: 20, fontWeight: "bold" }}
+                >
+                  Cash Register
+                </Text>
+              </View>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="CashIn"
+          component={CashIn}
+          options={{
+            headerStyle: {
+              backgroundColor: "#fff",
+            },
+            headerTitle: () => (
+              <View>
+                <Text
+                  style={{ color: "green", fontSize: 18, fontWeight: "bold" }}
+                >
+                  Cash In
+                </Text>
+              </View>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="CashOut"
+          component={CashOut}
+          options={{
+            headerStyle: {
+              backgroundColor: "#fff",
+            },
+            headerTitle: () => (
+              <View>
+                <Text
+                  style={{ color: "tomato", fontSize: 18, fontWeight: "bold" }}
+                >
+                  Cash Out
+                </Text>
+              </View>
+            ),
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
