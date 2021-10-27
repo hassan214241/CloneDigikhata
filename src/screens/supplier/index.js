@@ -100,6 +100,7 @@ export const Supplier = () => {
               icon={({ color, size }) => (
                 <MaterialIcons name="chevron-right" size={size} color="red" />
               )}
+              onPress={() => alert("Please Add a Supplier to View Report")}
             />
           </Detials1>
           <AppBtn>

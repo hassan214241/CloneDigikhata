@@ -103,6 +103,7 @@ export const Customer = () => {
               icon={({ color, size }) => (
                 <MaterialIcons name="chevron-right" size={24} color="red" />
               )}
+              onPress={() => alert("Please Add Customer to View Report")}
             >
               Report
             </Button>
