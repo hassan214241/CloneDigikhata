@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { HeaderBackButton } from "@react-navigation/elements";
 import { HomeTab } from "./HomeTab";
 import { AddNewCustomer } from "../screens/customer/add new customer";
 import { CreateCustomer } from "../screens/customer/create customer";
@@ -33,7 +34,10 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
-            // headerTitleAlign: "left",
+            headerBackTitleVisible: false,
+            headerLeft: (props) => (
+              <HeaderBackButton {...props} tintColor="white" />
+            ),
             headerTitle: () => (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Text style={{ color: "white", fontSize: 20 }}>
@@ -53,6 +57,10 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
+            headerBackTitleVisible: false,
+            headerLeft: (props) => (
+              <HeaderBackButton {...props} tintColor="white" />
+            ),
             headerTitle: () => (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Text style={{ color: "white", fontSize: 20 }}>
@@ -72,6 +80,10 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
+            headerBackTitleVisible: false,
+            headerLeft: (props) => (
+              <HeaderBackButton {...props} tintColor="white" />
+            ),
             headerTitle: () => (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Text style={{ color: "white", fontSize: 20 }}>
@@ -91,6 +103,10 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
+            headerBackTitleVisible: false,
+            headerLeft: (props) => (
+              <HeaderBackButton {...props} tintColor="white" />
+            ),
             headerTitle: () => (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Text style={{ color: "white", fontSize: 20 }}>
@@ -110,12 +126,13 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
-            // headerTitleAlign: "left",
+            headerBackTitleVisible: false,
+            headerLeft: (props) => (
+              <HeaderBackButton {...props} tintColor="white" />
+            ),
             headerTitle: () => (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Text
-                  style={{ color: "white", fontSize: 20, fontWeight: "bold" }}
-                >
+                <Text style={{ color: "white", fontSize: 20 }}>
                   Cash Register
                 </Text>
               </View>
@@ -129,13 +146,13 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "#fff",
             },
+            headerBackTitleVisible: false,
+            headerLeft: (props) => (
+              <HeaderBackButton {...props} tintColor="green" />
+            ),
             headerTitle: () => (
               <View>
-                <Text
-                  style={{ color: "green", fontSize: 18, fontWeight: "bold" }}
-                >
-                  Cash In
-                </Text>
+                <Text style={{ color: "green", fontSize: 18 }}>Cash In</Text>
               </View>
             ),
           }}
@@ -147,13 +164,13 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "#fff",
             },
+            headerBackTitleVisible: false,
+            headerLeft: (props) => (
+              <HeaderBackButton {...props} tintColor="tomato" />
+            ),
             headerTitle: () => (
               <View>
-                <Text
-                  style={{ color: "tomato", fontSize: 18, fontWeight: "bold" }}
-                >
-                  Cash Out
-                </Text>
+                <Text style={{ color: "tomato", fontSize: 18 }}>Cash Out</Text>
               </View>
             ),
           }}
@@ -168,7 +185,10 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
-            // headerTitleAlign: "left",
+            headerBackTitleVisible: false,
+            headerLeft: (props) => (
+              <HeaderBackButton {...props} tintColor="white" />
+            ),
             headerTitle: () => (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Text style={{ color: "white", fontSize: 20 }}>
@@ -188,7 +208,10 @@ export const HomeStack = () => {
             headerStyle: {
               backgroundColor: "tomato",
             },
-            // headerTitleAlign: "left",
+            headerBackTitleVisible: false,
+            headerLeft: (props) => (
+              <HeaderBackButton {...props} tintColor="white" />
+            ),
             headerTitle: () => (
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Text style={{ color: "white", fontSize: 20 }}>Collection</Text>

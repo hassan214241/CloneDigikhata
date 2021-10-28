@@ -41,12 +41,12 @@ export const HomeTab = () => {
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <FontAwesome
                 name="book"
-                size={26}
+                size={24}
                 color="white"
                 style={{ paddingRight: 10 }}
               />
               <Text
-                style={{ color: "white", fontSize: 20, fontWeight: "bold" }}
+                style={{ color: "white", fontSize: 20,  }}
               >
                 {children}
               </Text>
@@ -151,8 +151,6 @@ export const HomeTab = () => {
               </View>
             </View>
           ),
-
-          // headerShown: false,
         }}
       />
     </Tab.Navigator>
