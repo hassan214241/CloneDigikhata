@@ -45,15 +45,10 @@ export const HomeTab = () => {
                 color="white"
                 style={{ paddingRight: 10 }}
               />
-              <Text
-                style={{ color: "white", fontSize: 20,  }}
-              >
-                {children}
-              </Text>
+              <Text style={{ color: "white", fontSize: 20 }}>{children}</Text>
               <View
                 style={{
                   padding: 13,
-                  fontWeight: "bold",
                 }}
               >
                 <AntDesign
@@ -116,13 +111,10 @@ export const HomeTab = () => {
                 color="white"
                 style={{ paddingRight: 10 }}
               />
-              <Text style={{ color: "#fff", fontSize: 20, fontWeight: "bold" }}>
-                Software
-              </Text>
+              <Text style={{ color: "#fff", fontSize: 20 }}>Software</Text>
               <View
                 style={{
                   padding: 13,
-                  fontWeight: "bold",
                 }}
               >
                 <AntDesign
