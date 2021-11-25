@@ -1,13 +1,13 @@
 import React from "react";
-import { HomeStack } from "./src/navigation/HomeStack";
 import "react-native-gesture-handler";
 import "./firebase-init";
 import { Provider } from "react-native-paper";
+import { AppNavigator } from "./src/navigation/AppNavigator";
 
 export default function App() {
   return (
     <Provider>
-      <HomeStack />
+      <AppNavigator />
     </Provider>
   );
 }

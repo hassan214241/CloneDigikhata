@@ -1,2 +1,3 @@
 export * from "./HomeTab";
-export * from "./HomeStack";
+export * from "./AppStack";
+export * from "./AuthStack";

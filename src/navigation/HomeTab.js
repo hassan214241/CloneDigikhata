@@ -8,7 +8,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import RBSheet from "react-native-raw-bottom-sheet";
-import { BottomSheet } from "../screens/bottom sheet";
+import { BottomSheet } from "../screens/bottom_sheet";
 import { useNavigation } from "@react-navigation/native";
 import styled from "styled-components";
 const Collection = styled.View`

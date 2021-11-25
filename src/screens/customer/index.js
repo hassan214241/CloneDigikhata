@@ -125,7 +125,6 @@ export const Customer = () => {
           </Button>
         </CashRegister>
       </CardContanier>
-
       <CustomerCard>
         <Avatar.Image size={60} source={require("../../assests/user.png")} />
         <Text></Text>
