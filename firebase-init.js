@@ -1,4 +1,12 @@
-import firebase from "firebase/app";
+import firebaseApp from "firebase/app";
+import firebase from "firebase";
+
+// import * as firebase from ‘firebase’
+// import “firebase/auth”;
+// import “firebase/firestore”
+// import firestore from 'firebase/firestore';
+// import auth from 'firebase/auth';
+import functions from "firebase/functions";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAoJM6VqnuTc93rhpA4cQAZRQKVGHbUhs8",
@@ -10,4 +18,12 @@ const firebaseConfig = {
   measurementId: "G-G052K6CYS1",
 };
 
-firebase.initializeApp(firebaseConfig);
+firebaseApp.initializeApp(firebaseConfig);
+
+const firestore = firebase.firestore();
+const auth = firebase.auth();
+const functio = firebase.functions();
+
+firestore.useEmulator("localhost", 8080);
+auth.useEmulator("http://localhost:9099");
+functio.useEmulator("localhost", 5001);

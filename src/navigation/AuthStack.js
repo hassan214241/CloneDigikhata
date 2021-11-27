@@ -1,7 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
-// import { Login } from "../screens/login";
-// import { SignUp } from "../screens/signUp";
-import { VerifyCode } from "../screens/otp/verification-Otp";
+import { Login } from "../screens/login";
+import { SignUp } from "../screens/signUp";
+// import { VerifyCode } from "../screens/otp/verification-Otp";
 import React from "react";
 
 const Stack = createStackNavigator();
@@ -11,8 +11,13 @@ export const AuthStack = () => {
   return (
     <Navigator>
       <Screen
-        name="VerifyCode"
-        component={VerifyCode}
+        name="Login"
+        component={Login}
+        options={{ headerShown: false }}
+      />
+      <Screen
+        name="SignUp"
+        component={SignUp}
         options={{ headerShown: false }}
       />
     </Navigator>
